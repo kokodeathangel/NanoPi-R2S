@@ -25,7 +25,7 @@ jobs:
           sudo apt-get update
           sudo rm -rf /usr/share/dotnet /usr/local/lib/android/sdk
           sudo docker image prune -a -f
-          sudo apt-get -y install upx-ucl unzip subversion
+          sudo apt-get -y install upx-ucl unzip serf subversion
           sudo apt-get -y purge dotnet* ghc* google* llvm* mysql* php* zulu* firefox hhvm
           sudo apt-get -y autoremove --purge          
           wget -O - https://raw.githubusercontent.com/friendlyarm/build-env-on-ubuntu-bionic/master/install.sh | bash
@@ -69,24 +69,24 @@ jobs:
           rm -rf lean/luci-theme-argon
           git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git
 
-          svn co "https://github.com/vernesong/OpenClash/trunk/luci-app-openclash"
+          svn co https://github.com/vernesong/OpenClash/trunk/luci-app-openclash
           
-          svn co "https://github.com/xiaorouji/openwrt-passwall/trunk/luci-app-passwall"
-          svn co "https://github.com/xiaorouji/openwrt-passwall/trunk/tcping"
-          svn co "https://github.com/xiaorouji/openwrt-passwall/trunk/ssocks"
-          svn co "https://github.com/xiaorouji/openwrt-passwall/trunk/trojan-plus"
-          svn co "https://github.com/xiaorouji/openwrt-passwall/trunk/trojan-go"
-          svn co "https://github.com/xiaorouji/openwrt-passwall/trunk/naiveproxy"
-          svn co "https://github.com/xiaorouji/openwrt-passwall/trunk/brook"
-          svn co "https://github.com/xiaorouji/openwrt-passwall/trunk/chinadns-ng"
-          svn co "https://github.com/xiaorouji/openwrt-passwall/trunk/xray-core"
+          svn co https://github.com/xiaorouji/openwrt-passwall/trunk/luci-app-passwall
+          svn co https://github.com/xiaorouji/openwrt-passwall/trunk/tcping
+          svn co https://github.com/xiaorouji/openwrt-passwall/trunk/ssocks
+          svn co https://github.com/xiaorouji/openwrt-passwall/trunk/trojan-plus
+          svn co https://github.com/xiaorouji/openwrt-passwall/trunk/trojan-go
+          svn co https://github.com/xiaorouji/openwrt-passwall/trunk/naiveproxy
+          svn co https://github.com/xiaorouji/openwrt-passwall/trunk/brook
+          svn co https://github.com/xiaorouji/openwrt-passwall/trunk/chinadns-ng
+          svn co https://github.com/xiaorouji/openwrt-passwall/trunk/xray-core
           
-          svn co "https://github.com/songchenwen/nanopi-r2s/trunk/luci-app-r2sflasher"
+          svn co https://github.com/songchenwen/nanopi-r2s/trunk/luci-app-r2sflasher
           
-          svn co "https://github.com/pymumu/smartdns/trunk/package/openwrt smartdns"
-          svn co "https://github.com/pymumu/luci-app-smartdns/branches/lede luci-app-smartdns"
+          svn co https://github.com/pymumu/smartdns/trunk/package/openwrt smartdns
+          svn co https://github.com/pymumu/luci-app-smartdns/branches/lede luci-app-smartdns
           
-          svn co "https://github.com/lisaac/luci-app-dockerman/trunk/applications/luci-app-dockerman"
+          svn co https://github.com/lisaac/luci-app-dockerman/trunk/applications/luci-app-dockerman
           
           git clone https://github.com/jerrykuku/luci-app-jd-dailybonus.git
           git clone https://github.com/NateLol/luci-app-oled
